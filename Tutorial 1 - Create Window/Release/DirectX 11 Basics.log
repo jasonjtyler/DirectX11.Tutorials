@@ -1,0 +1,12 @@
+﻿Build started 3/17/2014 8:06:33 AM.
+     1>Project "C:\Users\jason.tyler\Documents\Visual Studio 2013\Projects\DirectX 11 Tests\DirectX 11 Basics\DirectX 11 Basics.vcxproj" on node 2 (Build target(s)).
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_1 /Fo "C:\Users\jason.tyler\Documents\Visual Studio 2013\Projects\DirectX 11 Tests\Release\effect.cso" effect.fx 
+     1>FXC : error X3501: 'main': entrypoint not found
+         
+         compilation failed; no code produced
+     1>Done Building Project "C:\Users\jason.tyler\Documents\Visual Studio 2013\Projects\DirectX 11 Tests\DirectX 11 Basics\DirectX 11 Basics.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.47
