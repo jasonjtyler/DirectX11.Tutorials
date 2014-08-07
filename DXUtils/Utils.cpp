@@ -1,6 +1,27 @@
 #pragma once
 #include "Utils.h"
 
+
+DirectX::XMMATRIX Utils::InverseTranspose(const DirectX::XMMATRIX &matrix)
+{
+	DirectX::XMMATRIX a = DirectX::XMMATRIX(matrix);
+	a.r[3] = DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
+
+	DirectX::XMVECTOR det = DirectX::XMMatrixDeterminant(a);
+	return DirectX::XMMatrixTranspose(DirectX::XMMatrixInverse(&det, a));
+}
+
+DirectX::XMVECTOR Utils::ComputeNormal(const DirectX::XMVECTOR &p0, const DirectX::XMVECTOR &p1, const DirectX::XMVECTOR &p2)
+{
+	DirectX::XMVECTOR u = DirectX::XMVectorSubtract(p1, p0);
+	DirectX::XMVECTOR v = DirectX::XMVectorSubtract(p2, p0);
+
+	u = DirectX::XMVector3Cross(u, v);
+	u = DirectX::XMVector3Normalize(u);
+
+	return u;
+}
+
 HRESULT Utils::CreateDepthStencilView(ID3D11Device *device, D3D11_TEXTURE2D_DESC *description, ID3D11DepthStencilView **depthStencilView)
 {
 	HRESULT result;
