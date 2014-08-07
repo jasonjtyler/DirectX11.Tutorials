@@ -76,7 +76,8 @@ Window::Window(HINSTANCE instance)
 	_rotationX = 0.0f;
 	_rotationY = 0.0f;
 
-
+	_displayDirectionalLight = true;
+	_displayPointLight = true;
 }
 
 void Window::Destroy()
@@ -278,10 +279,33 @@ void Window::Render()
 	//Pass the lighting parameters to the pixel shader.
 	resource = _effect->LockDirectionalLightBuffer();
 	LightsBuffer *lights = (LightsBuffer *)resource.pData;
-	lights->DirectionLight1.Ambient = DirectX::XMFLOAT4(0.25f, 0.25f, 0.25f, 1.0f);
-	lights->DirectionLight1.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-	lights->DirectionLight1.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
-	lights->DirectionLight1.Direction = DirectX::XMFLOAT3(-0.5f, -0.5f, 0.5f);
+	
+	if (_displayDirectionalLight) 
+	{
+		lights->DirectionLight1.Ambient = DirectX::XMFLOAT4(0.25f, 0.25f, 0.25f, 1.0f);
+		lights->DirectionLight1.Diffuse = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+		lights->DirectionLight1.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+		lights->DirectionLight1.Direction = DirectX::XMFLOAT3(-0.5f, -0.5f, 0.5f);
+	}
+	else 
+	{
+		ZeroMemory(&lights->DirectionLight1, sizeof(DirectionalLight));
+	}
+
+	if (_displayPointLight)
+	{
+		lights->PointLight1.Ambient = DirectX::XMFLOAT4(0.2f, 0.2f, 0.2f, 1.0f);
+		lights->PointLight1.Diffuse = DirectX::XMFLOAT4(0.8f, 0.8f, 0.8f, 1.0f);
+		lights->PointLight1.Specular = DirectX::XMFLOAT4(1.0f, 1.0f, 1.0f, 1.0f);
+		lights->PointLight1.Position = DirectX::XMFLOAT3(-1.0f, 1.0f, -1.0f);
+		lights->PointLight1.Range = 5.0f;
+		lights->PointLight1.Attenuation = DirectX::XMFLOAT3(0.0f, 1.0f, 0.0f);
+	}
+	else
+	{
+		ZeroMemory(&lights->PointLight1, sizeof(PointLight));
+	}
+
 	lights->EyePosition = DirectX::XMFLOAT3(0.0f, 0.0f, -5.0f);
 	_effect->UnlockDirectionalLightBuffer();
 
@@ -375,6 +399,22 @@ LRESULT Window::WindowMessage(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 
 	case WM_LBUTTONUP:
 		MouseUp();
+		break;
+
+	case WM_KEYDOWN:
+		switch (wParam)
+		{
+		
+		case 0x50: //P
+			_displayPointLight = !_displayPointLight;
+			Render();
+			break;
+		
+		case 0x44: //D
+			_displayDirectionalLight = !_displayDirectionalLight;
+			Render();
+			break;
+		}
 		break;
 
 	case WM_DESTROY:

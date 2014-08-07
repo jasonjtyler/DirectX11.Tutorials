@@ -1,38 +1,13 @@
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pch
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pdb
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.idb
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\pch.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\commonstates.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\ddstextureloader.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\dgsleffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\dgsleffectfactory.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\dualtextureeffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\binaryreader.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\effectcommon.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\effectfactory.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\environmentmapeffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\geometricprimitive.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\model.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\modelloadcmo.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\modelloadsdkmesh.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\screengrab.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\skinnedeffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\spritebatch.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\primitivebatch.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\spritefont.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\vertextypes.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\wictextureloader.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\alphatesteffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\basiceffect.obj
-d:\directx 11 tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.lib
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\alphatesteffect.obj
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\basiceffect.obj
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\binaryreader.obj
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pch
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pdb
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.idb
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\pch.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\commonstates.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\ddstextureloader.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\dgsleffect.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\dgsleffectfactory.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\dualtextureeffect.obj
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\binaryreader.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\effectcommon.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\effectfactory.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\environmentmapeffect.obj
@@ -40,17 +15,15 @@ d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\geometricprimitive
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\model.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\modelloadcmo.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\modelloadsdkmesh.obj
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\pch.obj
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\primitivebatch.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\screengrab.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\skinnedeffect.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\spritebatch.obj
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\primitivebatch.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\spritefont.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\vertextypes.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\wictextureloader.obj
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pch
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.idb
-d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.pdb
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\alphatesteffect.obj
+d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\basiceffect.obj
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxtk.lib
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxt.e0b52ae7.tlog\cl.command.1.tlog
 d:\directx11.tutorials\directxtk\bin\desktop_2013\win32\debug\directxt.e0b52ae7.tlog\cl.read.1.tlog

@@ -1,48 +1,25 @@
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pch
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pdb
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.idb
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexutil.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexwic.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtextga.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexresize.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexpmalpha.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexnormalmaps.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmisc.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmipmaps.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxteximage.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexfliprotate.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexdds.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexd3d11.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexconvert.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompressgpu.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompress.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bcdirectcompute.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc6hbc7.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc4bc5.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc.obj
-d:\directx 11 tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.lib
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc4bc5.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc6hbc7.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bcdirectcompute.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompress.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompressgpu.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexconvert.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexd3d11.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexdds.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexfliprotate.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxteximage.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmipmaps.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmisc.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexnormalmaps.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexpmalpha.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexresize.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtextga.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pch
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pdb
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.idb
 d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexutil.obj
 d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexwic.obj
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pch
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.idb
-d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.pdb
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtextga.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexresize.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexpmalpha.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexnormalmaps.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmisc.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexmipmaps.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxteximage.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexfliprotate.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexdds.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexd3d11.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexconvert.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompressgpu.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtexcompress.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bcdirectcompute.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc6hbc7.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc4bc5.obj
+d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\bc.obj
 d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.lib
 d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.tlog\cl.command.1.tlog
 d:\directx11.tutorials\directxtex\directxtex\bin\desktop_2013\win32\debug\directxtex.tlog\cl.read.1.tlog

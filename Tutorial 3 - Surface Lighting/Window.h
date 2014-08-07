@@ -42,6 +42,8 @@ private:
 	float _rotationStartY;
 	float _rotationX;
 	float _rotationY;
+	bool _displayPointLight;
+	bool _displayDirectionalLight;
 	
 	void Destroy();
 	POINT GetMousePosition();

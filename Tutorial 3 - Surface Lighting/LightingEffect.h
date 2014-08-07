@@ -12,6 +12,19 @@ struct DirectionalLight
 	float pad;
 };
 
+struct PointLight
+{
+	PointLight() { ZeroMemory(this, sizeof(this)); }
+
+	DirectX::XMFLOAT4 Ambient;
+	DirectX::XMFLOAT4 Diffuse;
+	DirectX::XMFLOAT4 Specular;
+	DirectX::XMFLOAT3 Position;
+	float Range;
+	DirectX::XMFLOAT3 Attenuation;
+	float pad;
+};
+
 struct MatrixBuffer
 {
 	DirectX::XMFLOAT4X4 WorldViewProj;
@@ -22,6 +35,7 @@ struct MatrixBuffer
 struct LightsBuffer
 {
 	DirectionalLight DirectionLight1;
+	PointLight PointLight1;
 	DirectX::XMFLOAT3 EyePosition;
 	float pad;
 };
