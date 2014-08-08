@@ -33,8 +33,11 @@ void Effect::Initialize()
 {
 	this->InitializeVertexShader();
 	this->InitializePixelShader();
+	this->InitializeGeometryShader();
 	this->InitializeBuffers();
 }
+
+void Effect::InitializeGeometryShader() {}
 
 ULONG Effect::AddRef()
 {

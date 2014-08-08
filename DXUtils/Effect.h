@@ -23,8 +23,11 @@ protected:
 	ID3D11InputLayout *inputLayout;
 	ID3D11VertexShader *vertexShader;
 	ID3D11PixelShader *pixelShader;
+	ID3D11GeometryShader *geometryShader;
 
 	std::vector<byte> ReadFile(const char* filename);
+
+	virtual void InitializeGeometryShader();
 
 	virtual void InitializeBuffers() = 0;
 	virtual void InitializePixelShader() = 0;
