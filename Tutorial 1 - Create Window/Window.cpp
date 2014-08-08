@@ -10,7 +10,7 @@
 static TCHAR szWindowClass[] = _T("win32app");
 
 // The string that appears in the application's title bar.
-static TCHAR szTitle[] = _T("DirectX Tutorial #1 - Initialize");
+static TCHAR szTitle[] = _T("DirectX Tutorial #1 - Create Window");
 
 Window::Window(HINSTANCE instance)
 {
