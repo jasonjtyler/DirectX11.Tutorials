@@ -6,6 +6,8 @@ LightingEffect::~LightingEffect()
 {
 	if (_matrixBuffer)
 		_matrixBuffer->Release();
+	if (_lightsBuffer)
+		_lightsBuffer->Release();
 }
 
 void LightingEffect::Attach()
@@ -39,7 +41,7 @@ void LightingEffect::InitializeBuffers()
 	matrixBufferDesc.MiscFlags = 0;
 	matrixBufferDesc.StructureByteStride = 0;
 
-	device->CreateBuffer(&matrixBufferDesc, NULL, &_directionalLightBuffer);
+	device->CreateBuffer(&matrixBufferDesc, NULL, &_lightsBuffer);
 
 }
 
@@ -71,10 +73,10 @@ D3D11_MAPPED_SUBRESOURCE LightingEffect::LockMatrixBuffer()
 	return mappedResource;
 }
 
-D3D11_MAPPED_SUBRESOURCE LightingEffect::LockDirectionalLightBuffer()
+D3D11_MAPPED_SUBRESOURCE LightingEffect::LockLightsBuffer()
 {
 	D3D11_MAPPED_SUBRESOURCE mappedResource;
-	deviceContext->Map(_directionalLightBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
+	deviceContext->Map(_lightsBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 	return mappedResource;
 }
 
@@ -84,8 +86,8 @@ void LightingEffect::UnlockMatrixBuffer()
 	deviceContext->VSSetConstantBuffers(0, 1, &_matrixBuffer);
 }
 
-void LightingEffect::UnlockDirectionalLightBuffer()
+void LightingEffect::UnlockLightsBuffer()
 {
-	deviceContext->Unmap(_directionalLightBuffer, 0);
-	deviceContext->PSSetConstantBuffers(0, 1, &_directionalLightBuffer);
+	deviceContext->Unmap(_lightsBuffer, 0);
+	deviceContext->PSSetConstantBuffers(0, 1, &_lightsBuffer);
 }

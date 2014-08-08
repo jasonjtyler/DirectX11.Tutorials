@@ -31,8 +31,6 @@ private:
 	IDXGISwapChain *_swapChain;
 	ID3D11RenderTargetView *_renderTargetView;
 	ID3D11DepthStencilView *_depthStencilView;
-	ID3D11Resource* _texture;
-	ID3D11ShaderResourceView* _textureView;
 	ID3D11Buffer *_vertexBuffer;
 	LightingEffect *_effect;
 	POINT _mouseDragStart;

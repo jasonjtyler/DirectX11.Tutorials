@@ -48,13 +48,13 @@ public:
 
 	void Attach();
 	D3D11_MAPPED_SUBRESOURCE LockMatrixBuffer();
-	D3D11_MAPPED_SUBRESOURCE LockDirectionalLightBuffer();
+	D3D11_MAPPED_SUBRESOURCE LockLightsBuffer();
 	void UnlockMatrixBuffer();
-	void UnlockDirectionalLightBuffer();
+	void UnlockLightsBuffer();
 
 private:
 	ID3D11Buffer *_matrixBuffer;
-	ID3D11Buffer *_directionalLightBuffer;
+	ID3D11Buffer *_lightsBuffer;
 
 	void InitializeBuffers();
 	void InitializePixelShader();

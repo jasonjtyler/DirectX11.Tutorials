@@ -90,10 +90,6 @@ void Window::Destroy()
 		_depthStencilView->Release();
 	if (_renderTargetView)
 		_renderTargetView->Release();
-	if (_texture)
-		_texture->Release();
-	if (_textureView)
-		_textureView->Release();
 	if (_swapChain)
 		_swapChain->Release();
 	if (_d3dDeviceContext)
@@ -277,7 +273,7 @@ void Window::Render()
 	_effect->UnlockMatrixBuffer();
 
 	//Pass the lighting parameters to the pixel shader.
-	resource = _effect->LockDirectionalLightBuffer();
+	resource = _effect->LockLightsBuffer();
 	LightsBuffer *lights = (LightsBuffer *)resource.pData;
 	
 	if (_displayDirectionalLight) 
@@ -307,13 +303,13 @@ void Window::Render()
 	}
 
 	lights->EyePosition = DirectX::XMFLOAT3(0.0f, 0.0f, -5.0f);
-	_effect->UnlockDirectionalLightBuffer();
+	_effect->UnlockLightsBuffer();
 
 	//Clear the target (screen).
 	_d3dDeviceContext->ClearRenderTargetView(_renderTargetView, gray);
 	_d3dDeviceContext->ClearDepthStencilView(_depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
-	//Draw the vertices as a triangle list.
+	//Specify that vertices are drawn as a triangle list.
 	_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 	//Pass the vertex buffer containing the cube vertices to the device.
