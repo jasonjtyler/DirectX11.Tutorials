@@ -6,8 +6,9 @@ struct VertexOut
 
 struct GSOutput
 {
-	float4 pos : SV_POSITION;
-	float4 color : COLOR;
+	float4 Pos : SV_POSITION;
+	float4 Color : COLOR;
+	float2 Tex : TEXCOORD;
 };
 
 cbuffer cbRare
@@ -54,17 +55,21 @@ void main(line VertexOut input[2], inout TriangleStream<GSOutput> output)
 	float3 p0_ex = p0 - dir_offset;
 	float3 p1_ex = p1 + dir_offset;
 
-	v[0].pos = float4(p0_ex - normal_scaled, 1) * w0;
-	v[0].color = input[0].Color;
+	v[0].Pos = float4(p0_ex - normal_scaled, 1) * w0;
+	v[0].Color = input[0].Color;
+	v[0].Tex = float2(0, 0);
 
-	v[1].pos = float4(p0_ex + normal_scaled, 1) * w0;
-	v[1].color = input[0].Color;
+	v[1].Pos = float4(p0_ex + normal_scaled, 1) * w0;
+	v[1].Color = input[0].Color;
+	v[1].Tex = float2(0, 0);
 
-	v[2].pos = float4(p1_ex + normal_scaled, 1) * w1;	
-	v[2].color = input[1].Color;
+	v[2].Pos = float4(p1_ex + normal_scaled, 1) * w1;	
+	v[2].Color = input[1].Color;
+	v[2].Tex = float2(10.0f, 0.0f);
 
-	v[3].pos = float4(p1_ex - normal_scaled, 1) * w1;
-	v[3].color = input[1].Color;
+	v[3].Pos = float4(p1_ex - normal_scaled, 1) * w1;
+	v[3].Color = input[1].Color;
+	v[3].Tex = float2(10.0f, 0.0f);
 
 	output.Append(v[2]);
 	output.Append(v[1]);

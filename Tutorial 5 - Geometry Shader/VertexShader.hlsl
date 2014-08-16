@@ -9,16 +9,6 @@ struct VertexOut
 	float4 Color : COLOR;
 };
 
-/*
-RasterizerState SolidRS
-{
-	FillMode = Solid;
-	CullMode = None;
-	FrontCounterClockwise = false;
-};
-*/
-
-
 VertexOut main(float3 pos : POSITION, float4 color : COLOR)
 {
 	VertexOut vout;

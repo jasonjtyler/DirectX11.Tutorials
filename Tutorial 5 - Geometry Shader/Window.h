@@ -32,9 +32,6 @@ private:
 	ID3D11RenderTargetView *_renderTargetView;
 	ID3D11DepthStencilView *_depthStencilView;
 	ID3D11Buffer *_vertexBuffer;
-	ID3D11InputLayout *_layout;
-	ID3D11VertexShader *_vertexShader;
-	ID3D11PixelShader *_pixelShader;
 	LineThicknessEffect *_effect;
 	HWND _handle;
 	float _lineThickness;

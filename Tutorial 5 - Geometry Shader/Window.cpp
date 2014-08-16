@@ -75,14 +75,8 @@ Window::Window(HINSTANCE instance)
 
 void Window::Destroy()
 {
-	if (_layout)
-		_layout->Release();
 	if (_vertexBuffer)
 		_vertexBuffer->Release();
-	if (_vertexShader)
-		_vertexShader->Release();
-	if (_pixelShader)
-		_pixelShader->Release();
 	if (_depthStencilView)
 		_depthStencilView->Release();
 	if (_renderTargetView)
