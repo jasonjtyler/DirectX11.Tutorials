@@ -23,5 +23,4 @@ private:
 	void InitializeBuffers();
 	void InitializePixelShader();
 	void InitializeVertexShader();
-
 };

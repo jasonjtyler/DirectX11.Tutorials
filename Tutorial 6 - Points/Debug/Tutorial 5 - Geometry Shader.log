@@ -1,0 +1,30 @@
+﻿Build started 10/15/2014 8:14:35 AM.
+     1>Project "D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\Tutorial 5 - Geometry Shader.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DirectX 11 Basics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_4_0 /Fo "D:\DirectX11.Tutorials\Debug\GeometryShader.cso" /Od /Zi GeometryShader.hlsl 
+     1>D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\GeometryShader.hlsl(33,9-24): warning X3206: implicit truncation of vector type
+     1>D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\GeometryShader.hlsl(55,17-31): warning X3206: implicit truncation of vector type
+     1>D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\GeometryShader.hlsl(56,17-31): warning X3206: implicit truncation of vector type
+         
+         compilation object save succeeded; see D:\DirectX11.Tutorials\Debug\GeometryShader.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_1 /Fo "D:\DirectX11.Tutorials\Debug\PixelShader.cso" /Od /Zi PixelShader.hlsl 
+         compilation object save succeeded; see D:\DirectX11.Tutorials\Debug\PixelShader.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_1 /Fo "D:\DirectX11.Tutorials\Debug\VertexShader.cso" /Od /Zi VertexShader.hlsl 
+         compilation object save succeeded; see D:\DirectX11.Tutorials\Debug\VertexShader.cso
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Windows Kits\8.1\Include\um" /ID:\DirectX11.Tutorials\\DXUtils /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Program.cpp LineThicknessEffect.cpp Window.cpp
+         Window.cpp
+         LineThicknessEffect.cpp
+         Program.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\DirectX11.Tutorials\Debug\Tutorial 5 - Geometry Shader.exe" /INCREMENTAL /NOLOGO d3d11.lib dxutils.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\DirectX11.Tutorials\Debug\Tutorial 5 - Geometry Shader.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\DirectX11.Tutorials\Debug\Tutorial 5 - Geometry Shader.lib" /MACHINE:X86 Debug\Program.obj
+         Debug\LineThicknessEffect.obj
+         Debug\Window.obj
+         Tutorial 5 - Geometry Shader.vcxproj -> D:\DirectX11.Tutorials\Debug\Tutorial 5 - Geometry Shader.exe
+     1>Done Building Project "D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\Tutorial 5 - Geometry Shader.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.11

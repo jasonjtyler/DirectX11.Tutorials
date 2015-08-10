@@ -1,5 +1,16 @@
-﻿Build started 8/15/2014 10:52:31 PM.
+﻿Build started 3/1/2015 11:37:49 PM.
+     1>Project "D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\Tutorial 5 - Geometry Shader.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DirectX 11 Basics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T gs_4_0 /Fo "D:\DirectX11.Tutorials\Debug\GeometryShader.cso" /Od /Zi GeometryShader.hlsl 
+     1>D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\GeometryShader.hlsl(37,9-24): warning X3206: implicit truncation of vector type
+     1>D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\GeometryShader.hlsl(57,9-68): warning X3206: implicit truncation of vector type
+         
+         compilation object save succeeded; see D:\DirectX11.Tutorials\Debug\GeometryShader.cso
+       Link:
+         Tutorial 5 - Geometry Shader.vcxproj -> D:\DirectX11.Tutorials\Debug\Tutorial 5 - Geometry Shader.exe
+     1>Done Building Project "D:\DirectX11.Tutorials\Tutorial 5 - Geometry Shader\Tutorial 5 - Geometry Shader.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:00.10

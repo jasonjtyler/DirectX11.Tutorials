@@ -8,6 +8,7 @@
 #include <vector>
 #include <fstream>
 #include "SimpleEffect.h"
+#include <ScreenGrab.h>
 
 struct Vertex
 {
@@ -36,6 +37,7 @@ private:
 	ID3D11VertexShader *_vertexShader;
 	ID3D11PixelShader *_pixelShader;
 	SimpleEffect *_effect;
+	ID3D11Texture2D *_screenTexture;
 	HWND _handle;
 	
 	void Destroy();

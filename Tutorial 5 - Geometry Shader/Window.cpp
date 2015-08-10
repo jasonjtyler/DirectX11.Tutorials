@@ -118,12 +118,14 @@ void Window::InitializeVertexBuffer()
 {
 	Vertex vertices[] = {
 		{ DirectX::XMFLOAT3(0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(0.0f, 1.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 1.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(-0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 1.0f, 0.0f) } };
+		{ DirectX::XMFLOAT3(0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.0f, 1.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(-0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(-0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) } };
 
 	D3D11_BUFFER_DESC bufferDesc;
 	bufferDesc.Usage = D3D11_USAGE_IMMUTABLE;
-	bufferDesc.ByteWidth = sizeof(Vertex)* 3;
+	bufferDesc.ByteWidth = sizeof(Vertex)* 6;
 	bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 	bufferDesc.CPUAccessFlags = 0;
 	bufferDesc.MiscFlags = 0;
@@ -165,14 +167,14 @@ void Window::Render()
 	LineParamsBuffer* dimensionsBuffer;
 	mappedResource = _effect->LockDimensionsBuffer();
 	dimensionsBuffer = (LineParamsBuffer*)mappedResource.pData;
-	dimensionsBuffer->ScreenDimensions = DirectX::XMFLOAT2(_width, _height);
+	dimensionsBuffer->ScreenDimensions = DirectX::XMFLOAT2(_width , _height);
 	dimensionsBuffer->LineThickness = _lineThickness;
 	_effect->UnlockDimensionsBuffer();
 
 	_d3dDeviceContext->ClearRenderTargetView(_renderTargetView, white);
 	_d3dDeviceContext->ClearDepthStencilView(_depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
-	_d3dDeviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_LINESTRIP);
+	_d3dDeviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ);
 
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
@@ -180,7 +182,7 @@ void Window::Render()
 
 	_effect->Attach();
 
-	_d3dDeviceContext->Draw(3, 0);
+	_d3dDeviceContext->Draw(5, 0);
 
 	_swapChain->Present(0, 0);
 }
@@ -212,7 +214,7 @@ void Window::Resize()
 	_d3dDevice->CreateRenderTargetView(backBuffer, NULL, &_renderTargetView);
 	backBuffer->Release();
 
-	//Depth stencil
+	//Depth stencil 
 
 	D3D11_TEXTURE2D_DESC depthStencilDesc;
 	depthStencilDesc = Utils::CreateDepthStencilDescription(clientRect.right, clientRect.bottom);

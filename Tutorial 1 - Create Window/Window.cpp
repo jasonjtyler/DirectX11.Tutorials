@@ -3,6 +3,7 @@
 #pragma once
 #include "Window.h"
 #include "Utils.h"
+#include <wincodec.h>
 
 // Global variables
 
@@ -111,6 +112,7 @@ void Window::Initialize()
 
 	InitializeVertexBuffer();
 	InitializeShaders();
+
 }
 
 void Window::InitializeShaders()
@@ -183,11 +185,18 @@ void Window::Render()
 	_d3dDeviceContext->Draw(3, 0);
 
 	_swapChain->Present(0, 0);
+
+	//ID3D11Texture2D *backBuffer = NULL;
+	//_swapChain->GetBuffer(0, __uuidof(*backBuffer), (void**)&backBuffer);
+	//HRESULT hr = DirectX::SaveWICTextureToFile(_d3dDeviceContext, backBuffer, GUID_ContainerFormatJpeg, L"SCREENSHOT.JPG");
+	//backBuffer->Release();
+
 }
 
 void Window::Resize()
 {
 	HRESULT result;
+
 
 	RECT clientRect;
 	GetClientRect(_handle, &clientRect);

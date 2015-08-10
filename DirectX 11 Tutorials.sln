@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial 4 - Blending", "Tu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial 5 - Geometry Shader", "Tutorial 5 - Geometry Shader\Tutorial 5 - Geometry Shader.vcxproj", "{79BEE8F7-DD9D-421B-A477-9AF47931534C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tutorial 6 - Points", "Tutorial 6 - Points\Tutorial 6 - Geometry Shader.vcxproj", "{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,7 +33,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Debug|Win32.ActiveCfg = Debug|Win32
 		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Debug|Win32.Build.0 = Debug|Win32
-		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Debug|x64.ActiveCfg = Debug|Win32
+		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Debug|x64.ActiveCfg = Debug|x64
 		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Profile|Win32.ActiveCfg = Release|Win32
 		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Profile|Win32.Build.0 = Release|Win32
 		{4776A936-094A-4681-9A7D-0E1A99945A6D}.Profile|x64.ActiveCfg = Release|Win32
@@ -107,6 +109,15 @@ Global
 		{79BEE8F7-DD9D-421B-A477-9AF47931534C}.Release|Win32.ActiveCfg = Release|Win32
 		{79BEE8F7-DD9D-421B-A477-9AF47931534C}.Release|Win32.Build.0 = Release|Win32
 		{79BEE8F7-DD9D-421B-A477-9AF47931534C}.Release|x64.ActiveCfg = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Debug|Win32.Build.0 = Debug|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Debug|x64.ActiveCfg = Debug|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Profile|Win32.ActiveCfg = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Profile|Win32.Build.0 = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Profile|x64.ActiveCfg = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Release|Win32.ActiveCfg = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Release|Win32.Build.0 = Release|Win32
+		{ABDB75F7-BE9B-4369-8DA9-66D8B22D0E17}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,13 @@
+﻿Build started 10/18/2014 4:26:17 PM.
+     1>Project "D:\DirectX11.Tutorials\Tutorial 6 - Points\Tutorial 6 - Geometry Shader.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DirectX 11 Basics.vcxproj, Tutorial 5 - Geometry Shader.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_1 /Fo "D:\DirectX11.Tutorials\Debug\PixelShader.cso" /Zi PixelShader.hlsl 
+         compilation object save succeeded; see D:\DirectX11.Tutorials\Debug\PixelShader.cso
+       Link:
+         Tutorial 6 - Geometry Shader.vcxproj -> D:\DirectX11.Tutorials\Debug\Tutorial 6 - Points.exe
+     1>Done Building Project "D:\DirectX11.Tutorials\Tutorial 6 - Points\Tutorial 6 - Geometry Shader.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.20
