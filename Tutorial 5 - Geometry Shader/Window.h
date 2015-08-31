@@ -18,7 +18,8 @@ struct Vertex
 
 const float blue[] = { 0.0f, 0.0f, 1.0f, 0.0f };
 const float red[] = { 1.0f, 0.0f, 0.0f, 0.0f };
-const float white[] = { 1.0f, 1.0f, 1.0f, 0.0f };
+const float white[] = { 1.0f, 1.0f, 1.0f, 0.0f }; 
+const float black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 

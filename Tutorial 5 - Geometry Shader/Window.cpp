@@ -70,7 +70,7 @@ Window::Window(HINSTANCE instance)
 	this->_handle = handle;
 	SetWindowLongPtr(handle, GWL_USERDATA, reinterpret_cast<long>(this));
 
-	_lineThickness = 2.0f;
+	_lineThickness = 10.0f;
 }
 
 void Window::Destroy()
@@ -117,15 +117,20 @@ void Window::InitializeShaders()
 void Window::InitializeVertexBuffer()
 {
 	Vertex vertices[] = {
-		{ DirectX::XMFLOAT3(0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(0.0f, 1.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(-0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
-		{ DirectX::XMFLOAT3(-0.5f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) } };
+		{ DirectX::XMFLOAT3(-0.7f, -0.4f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(-0.7f, -0.4f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(-0.1f, -0.2f, 0.0f), DirectX::XMFLOAT4(0.0f, 0.0f, 1.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(-0.3f, 0.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.3f, 1.0f, 0.0f), DirectX::XMFLOAT4(0.0f, 1.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(1.0f, 1.0f, 0.0f), DirectX::XMFLOAT4(1.0f, 1.0f, 0.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.5f, 0.5f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 1.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.9f, 0.3f, 0.0f), DirectX::XMFLOAT4(1.0f, 0.0f, 1.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.9f, -0.2f, 0.0f), DirectX::XMFLOAT4(0.0f, 0.0f, 1.0f, 0.0f) },
+		{ DirectX::XMFLOAT3(0.9f, -0.2f, 0.0f), DirectX::XMFLOAT4(0.0f, 0.0f, 1.0f, 0.0f) } };
 
 	D3D11_BUFFER_DESC bufferDesc;
 	bufferDesc.Usage = D3D11_USAGE_IMMUTABLE;
-	bufferDesc.ByteWidth = sizeof(Vertex)* 6;
+	bufferDesc.ByteWidth = sizeof(Vertex) * 10;
 	bufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
 	bufferDesc.CPUAccessFlags = 0;
 	bufferDesc.MiscFlags = 0;
@@ -139,15 +144,17 @@ void Window::InitializeVertexBuffer()
 
 void Window::Render()
 {
+
 	RECT clientRect;
 	GetClientRect(_handle, &clientRect);
 
-	DirectX::XMVECTOR pos = DirectX::XMVectorSet(0.0, 0.0, 5.0, 0);
+	DirectX::XMVECTOR pos = DirectX::XMVectorSet(0.0, 0.0, -5.0, 0);
 	DirectX::XMVECTOR target = DirectX::XMVectorZero();
 	DirectX::XMVECTOR up = DirectX::XMVectorSet(0, 1.0f, 0, 0);
 	DirectX::XMMATRIX v = DirectX::XMMatrixLookAtLH(pos, target, up);
 
 	DirectX::XMMATRIX p = DirectX::XMMatrixPerspectiveFovLH(0.5f, ((float)clientRect.right / (float)clientRect.bottom), 0.01f, 1000.0f);
+	DirectX::XMMATRIX w = DirectX::XMMatrixTranslation(-0.25f, 0.0f, 0.0f);
 
 	DirectX::XMFLOAT4X4 view;
 	DirectX::XMStoreFloat4x4(&view, v);
@@ -155,7 +162,10 @@ void Window::Render()
 	DirectX::XMFLOAT4X4 proj;
 	DirectX::XMStoreFloat4x4(&proj, p);
 
-	DirectX::XMMATRIX vp = XMMatrixTranspose(v * p);
+	DirectX::XMFLOAT4X4 world;
+	DirectX::XMStoreFloat4x4(&world, w);
+
+	DirectX::XMMATRIX vp = XMMatrixTranspose(w * v * p);
 
 	D3D11_MAPPED_SUBRESOURCE mappedResource;
 	MatrixBuffer* matrixBuffer;
@@ -171,7 +181,7 @@ void Window::Render()
 	dimensionsBuffer->LineThickness = _lineThickness;
 	_effect->UnlockDimensionsBuffer();
 
-	_d3dDeviceContext->ClearRenderTargetView(_renderTargetView, white);
+	_d3dDeviceContext->ClearRenderTargetView(_renderTargetView, black);
 	_d3dDeviceContext->ClearDepthStencilView(_depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 	_d3dDeviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ);
@@ -182,7 +192,7 @@ void Window::Render()
 
 	_effect->Attach();
 
-	_d3dDeviceContext->Draw(5, 0);
+	_d3dDeviceContext->Draw(10, 0);
 
 	_swapChain->Present(0, 0);
 }
